@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterBug.master.cs" Inherits="MasterBug" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Bug Tracking System</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrapper">
+
+	<div id="top" class="clear">
+		<h1><a href="#">Bug Tracker</a></h1>
+		
+		<ul>
+			<li class="selected">
+                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink></li>
+			<li>
+                <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="Account.aspx">Account</asp:HyperLink></li>
+		</ul>
+	</div>
+	
+	<div id="body" class="clear">
+		<div id="sidebar" class="column-left">
+			<ul>	
+				<li>
+					<h4>Links</h4>
+	
+					<ul>
+						<li>
+                            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/add.png" />
+&nbsp;&nbsp; 
+                            <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/AddBugs.aspx">Add New Bugs</asp:HyperLink></li>
+						<li>
+                            <asp:ImageButton ID="ImageButton2" runat="server" 
+                                ImageUrl="~/images/search_16x16.gif" />
+&nbsp;&nbsp; 
+                            <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/search.aspx">Search</asp:HyperLink></li>						
+                        <li>
+                            <asp:ImageButton ID="ImageButton3" runat="server" 
+                                ImageUrl="~/images/eject_16x16.gif" />
+&nbsp;&nbsp; <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" /></li>
+                        <li>
+                            <asp:ImageButton ID="ibtnAdmin" runat="server" 
+                                ImageUrl="~/images/administrator2_16x16.gif" Visible="False" />&nbsp;&nbsp;
+                            <asp:HyperLink ID="HypAdmin" runat="server" Text="Admin" Visible="False" 
+                                NavigateUrl="Administrator/Default.aspx"></asp:HyperLink></li>
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+		<div id="content" class="column-right">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    <p>
+                    </p>
+                            <p>
+                                &nbsp;</p>
+
+            
+                        </asp:ContentPlaceHolder>
+
+            
+			        <br />
+
+            
+			<br /><br />
+		</div>
+	</div>
+	
+
+	
+	<div id="footer-links">
+		<p> 
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="Aboutus.aspx">About Us</asp:HyperLink> | 
+            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="Help.aspx">Help</asp:HyperLink>
+		</p>
+	</div>
+</div>
+    </form>
+</body>
+</html>
